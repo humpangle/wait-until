@@ -12,7 +12,8 @@ do
   ((i++))
 
   if [ "${i}" -gt "${timeout}" ]; then
-      echo "command was never successful, aborting due to ${timeout}s timeout!"
+      echo -e "\n\n\n=Command: $command="
+      echo -e "failed, aborting due to ${timeout}s timeout!\n\n"
       exit 1
   fi
 done
